@@ -3,7 +3,7 @@
 import React from "react";
 
 interface IInputContainerProps {
-  errorMessage?: string;
+  errorMessage?: any;
   inputValue?: number;
   onChangeText: (val: string) => void;
   inputLabel: String;
@@ -23,7 +23,7 @@ const InputContainer: React.FC<IInputContainerProps> = ({
       <div className="input-field-container">
         <div>{inputUnit}</div>
         <input
-          type="text"
+          type="number"
           onChange={(event) => onChangeText(event.target.value)}
           value={inputValue || ""}
         />

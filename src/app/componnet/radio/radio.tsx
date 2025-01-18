@@ -2,15 +2,15 @@
 
 import React from "react";
 
-interface IRadioProps {
+interface IRadioProps extends React.HTMLAttributes<HTMLDivElement> {
   isSelected: boolean;
   label: string;
 }
 
 const RadioInput: React.FC<IRadioProps> = ({ isSelected, label, ...rest }) => {
   return (
-    <div className="radio-container">
-      <div className="radio-group" {...rest}>
+    <div className="radio-container" {...rest}>
+      <div className="radio-group">
         <input type="radio" checked={isSelected} />
         <span className="radio-label">{label}</span>
       </div>
